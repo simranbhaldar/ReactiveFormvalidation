@@ -1,0 +1,82 @@
+.container {
+    border-style: hidden;
+    margin-left: 35%;
+    margin-right: 50%;
+    margin-top: 20px;
+    min-width: 700px;
+    resize: none;
+    background-color: rgb(255, 255, 255);
+    }
+    .form-control{
+        padding-top: 2%;
+
+    }
+    #input{
+        width: 80%;
+        padding-top: 8px;
+        padding-left: 10px;
+        height: 28px;
+    }
+    .controllers {
+        float: left;
+        padding: 20px;
+        height: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 20%;
+        font-weight: 100;
+    }
+
+    .controllers>input,
+    button {
+        font-size: 14px;
+        padding: 5px;
+        border: 1px solid black;
+        border-radius: 5px;
+
+    }
+    .btn1{
+        margin-right:10px;
+    }
+    .btn2{
+        margin-right:10px;
+    }
+.alert{
+    color:red;
+}
+
+/* html{
+    background: rgb(10,193,236);
+background: linear-gradient(90deg, rgba(10,193,236,1) 0%, rgba(9,206,211,1) 55%, rgba(4,105,111,1) 100%, rgba(0,15,20,0.7287289915966386) 100%, rgba(0,212,255,1) 100%);
+}
+
+.container {
+    border-style: hidden;
+    margin-left: 30%;
+    margin-right: 50%;
+    margin-top: 20px;
+    min-width: 700px;
+    resize: none;
+    background-color: rgb(92, 232, 220);
+    border-radius: 20px;
+
+}
+.label{
+    margin-top:2%;
+}
+
+.form-control{
+    height: 20px; 
+     display: flex;
+    margin-left: 20px;
+
+
+}
+.input{
+    width: 80%;
+    margin-top: 2%;
+    padding-top: 8px;
+    padding-left: 10px;
+    height: 28px;
+
+}  */
