@@ -1,135 +1,143 @@
-
 <div class="container">
   <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-    <div class="form-control">
-      <!-- user Name Validation -->
-      <label>Name : </label>
-      <input formControlName="Name" type="text" class="form-control"
-      [ngClass]="{ 'Name': submitted && registerFormControl.Name.errors}"  >
-      <span class="alert"
-      *ngIf="(registerFormControl.Name.touched || submitted) && registerFormControl.Name.errors?.['required']">
-        Name is required
-    </span>
-      <span class="alert"
-      *ngIf="registerFormControl.Name.touched && registerFormControl.Name.errors?.['pattern']">
-        only Alphabets are allowed
-      </span>
-    </div>
-    
-    <!-- gender Validation -->
-    <div class="form-control">
-      <label>Gender:</label>
-      <input id="male" formControlName="genderChk" value="Male" type="radio">Male
-      <input id="female" formControlName="genderChk" value="Female" type="radio">Female
-      <span class="alert"
-      *ngIf="(registerFormControl.genderChk.touched || submitted) && registerFormControl.genderChk.errors?.['required']">
-        Select Gender
-    </span></div>
-
-    <!-- Mobile Number Validation -->
-    <div class="form-control">
-      <label>Mobileno : </label>
-      <input formControlName="mobileNumber" type="text" class="form-control"
-      [ngClass]="{ 'mobileNumber': submitted && registerFormControl.mobileNumber.errors}" >
-      <span class="alert"
-      *ngIf="(registerFormControl.mobileNumber.touched || submitted) && registerFormControl.mobileNumber.errors?.['required']">
-        Mobile No Is Required
-    </span>
-        <span class="alert"
-        *ngIf="registerFormControl.mobileNumber.touched && registerFormControl.mobileNumber.errors?.['maxlength']">
-        only 10 digits 
-      </span>
-      <span class="alert"
-      *ngIf="registerFormControl.mobileNumber.touched && registerFormControl.mobileNumber.errors?.['maxLength']">
-      only 6 are allowed
-    </span>
-    <span class="alert"
-    *ngIf="registerFormControl.mobileNumber.touched && registerFormControl.mobileNumber.errors?.['pattern']">
-        only numbers are allowed
-      </span>
-    </div>
-      
-    <!-- Email Validation -->
-    <div class="form-control">
-      <label>Email: </label>
-      <input formControlName="emailId" type="text" class="form-control">
-      <span class="alert"
-      *ngIf="(registerFormControl.emailId.touched || submitted) && registerFormControl.emailId.errors?.['required']">
-        Email is required
-    </span>
-        <span class="alert"
-        *ngIf="registerFormControl.emailId.touched && registerFormControl.emailId.errors?.['pattern']">
-        Invalid Email
-      </span>
-
-    </div>
-
-
-
-    <!-- Zip Code Validation  -->
-    <div class="form-control">
-      <label>Zip : </label>
-      <input formControlName="zipCode" type="text" class="form-control">
-      <span class="alert"
-      *ngIf="(registerFormControl.zipCode.touched || submitted) && registerFormControl.zipCode.errors?.['required']">
-        Zip Code is required
-    </span>
-        <span class="alert"
-        *ngIf="registerFormControl.zipCode.touched && registerFormControl.zipCode.errors?.['maxlength']">
-        only 6 digits
-      </span>
-    <span class="alert"
-    *ngIf="registerFormControl.zipCode.touched && registerFormControl.zipCode.errors?.['pattern']">
-        only numbers are allowed
-      </span>
-    </div>
-
-
-
+  <div class="form-control">
+  <!-- user Name Validation -->
+  <label>Name : </label>
+  <input formControlName="Name" type="text" class="form-control"
+  [ngClass]="{ 'Name': submitted && registerFormControl.Name.errors}" />
+  <span class="alert"
+  *ngIf="(registerFormControl.Name.touched || submitted) && registerFormControl.Name.errors?.['required']">
+  Name is required
+  </span>
+  <span class="alert"
+  *ngIf="registerFormControl.Name.touched && registerFormControl.Name.errors?.['pattern']">
+  only Alphabets are allowed
+  </span>
+ 
+  </div>
   
-    <!-- Country  -->
-    <div class="form-control">
-      <label for="inputState" class="form-label">Country</label>
-      <select id="inputState" class="form-select" formControlName="Country">
-        <option value="">Choose...</option>
-        <option value="India">India</option>
-        <option value="Australia">Australia</option>
-        <option value="USA">USA</option>
-      </select>
-      <span class="alert"
-      *ngIf="(registerFormControl.Country.touched || submitted) && registerFormControl.Country.errors?.['required']">
-      Select Country
-    </span> 
-    </div>
-
-
-
-    <!-- Address Validation -->
-    <div class="form-control">
-      <label>address: </label>
-      <textarea formControlName="addressUser" type="text" class="form-control"></textarea>
-      <span class="alert"
-      *ngIf="(registerFormControl.addressUser.touched || submitted) && registerFormControl.addressUser.errors?.['required']">
-      Address Is Required
-    </span>
-    </div>
-<!-- Preference Validation -->
-<div class="form-control">
+  <!-- gender Validation -->
+  <div class="form-control">
+  <label>Gender:</label>
+  <input id="male" formControlName="genderChk" value="Male" type="radio">Male
+  <input id="female" formControlName="genderChk" value="Female" type="radio">Female
+  <span class="alert"
+  *ngIf="(registerFormControl.genderChk.touched || submitted) && registerFormControl.genderChk.errors?.['required']">
+  Select Gender
+  </span></div>
+  
+  <!-- Mobile Number Validation -->
+  <div class="form-control">
+  <label>Mobileno : </label>
+  <input formControlName="mobileNumber" type="text" class="form-control"
+  [ngClass]="{ 'mobileNumber': submitted && registerFormControl.mobileNumber.errors}" >
+  <span class="alert"
+  *ngIf="(registerFormControl.mobileNumber.touched || submitted) && registerFormControl.mobileNumber.errors?.['required']">
+  Mobile No Is Required
+  </span>
+  <span class="alert"
+  *ngIf="registerFormControl.mobileNumber.touched && registerFormControl.mobileNumber.errors?.['maxlength']">
+  only 10 digits
+  </span>
+  <span class="alert"
+  *ngIf="registerFormControl.mobileNumber.touched && registerFormControl.mobileNumber.errors?.['maxLength']">
+  only 6 are allowed
+  </span>
+  <span class="alert"
+  *ngIf="registerFormControl.mobileNumber.touched && registerFormControl.mobileNumber.errors?.['pattern']">
+  only numbers are allowed
+  </span>
+  </div>
+  
+  <!-- Email Validation -->
+  <div class="form-control">
+  <label>Email: </label>
+  <input formControlName="emailId" type="text" class="form-control">
+  <span class="alert"
+  *ngIf="(registerFormControl.emailId.touched || submitted) && registerFormControl.emailId.errors?.['required']">
+  Email is required
+  </span>
+  <span class="alert"
+  *ngIf="registerFormControl.emailId.touched && registerFormControl.emailId.errors?.['pattern']">
+  Invalid Email
+  </span>
+  
+  </div>
+  
+  
+  
+  <!-- Zip Code Validation -->
+  <div class="form-control">
+  <label>Zip : </label>
+  <input formControlName="zipCode" type="text" class="form-control">
+  <span class="alert"
+  *ngIf="(registerFormControl.zipCode.touched || submitted) && registerFormControl.zipCode.errors?.['required']">
+  Zip Code is required
+  </span>
+  <span class="alert"
+  *ngIf="registerFormControl.zipCode.touched && registerFormControl.zipCode.errors?.['maxlength']">
+  only 6 digits
+  </span>
+  <span class="alert"
+  *ngIf="registerFormControl.zipCode.touched && registerFormControl.zipCode.errors?.['pattern']">
+  only numbers are allowed
+  </span>
+  </div>
+  
+  
+  
+  
+  <!-- Country -->
+  <div class="form-control">
+  <label for="inputState" class="form-label">Country :</label>
+  <select id="inputState" class="form-select" formControlName="Country">
+  <option value="">Choose...</option>
+  <option value="India">India</option>
+  <option value="Australia">Australia</option>
+  <option value="USA">USA</option>
+  </select>
+  <span class="alert"
+  *ngIf="(registerFormControl.Country.touched || submitted) && registerFormControl.Country.errors?.['required']">
+  Select Country
+  </span>
+  </div>
+  
+  
+  
+  <!-- Address Validation -->
+  <div class="form-control">
+  <label>address: </label>
+  <textarea formControlName="addressUser" type="text" class="form-control"></textarea>
+  <span class="alert"
+  *ngIf="(registerFormControl.addressUser.touched || submitted) && registerFormControl.addressUser.errors?.['required']">
+  Address Is Required
+  </span>
+  </div>
+  <!-- Preference Validation -->
+  <div class="form-control">
   <label>Preference</label>
-    <span *ngFor="let country of preferemce;; let i=index">
-      <input type="checkbox" formArrayName="selectedPreference" value="{{country}}" (change)="onCheckboxChange($event)"/>
-      {{ country}}
-    </span></div>
-
-    <!-- buttons -->
-    <div class="controllers">
-      <button class="btn1" type="submit" >Submit</button>
-      <button class="btn2" (click)="retrieveData()">Retrieve</button>
-      <button type="reset" (click)="resetData()">Reset</button>
-    </div>
+  <span *ngFor="let color of preferemce;; let i=index">
+  <input type="checkbox"  formArrayName="selectedPreference" id="{{color}}" value="{{color}}"
+   (change)="onCheckboxChange($event)"/>
+  {{ color}}
+  </span>
+  <span class="alert"
+  *ngIf="(registerFormControl.selectedPreference.touched || submitted) && registerFormControl.selectedPreference.errors?.['required']">
+  Select Preference
+  </span>
+ 
+  
+ 
+</div>
+  
+  <!-- buttons -->
+  <div class="controllers">
+  <button class="btn1" type="submit">Submit</button>
+  <button class="btn2" (click)="retrieveData()">Retrieve</button>
+  <button type="reset" (click)="resetData()">Reset</button>
+  </div>
   </form>
   
-
-</div>
-
-
+  
+  </div>
+  
